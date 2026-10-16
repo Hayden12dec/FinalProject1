@@ -11,11 +11,7 @@ from backend.routes import auth, exams, attempts, proctoring, admin, demo
 
 setup_logging()
 
-# Initial database seed on load
-try:
-    seed_database()
-except Exception as e:
-    logger.error(f"Initial seed notice: {e}")
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

@@ -31,6 +31,7 @@ export default function WebcamMonitor({ attemptId, isPaused = false, onSuspicion
   const [micEnergy, setMicEnergy] = useState(0.0);
   const [recentAlert, setRecentAlert] = useState(null);
   const [showDebug, setShowDebug] = useState(false);
+  const [impersonationFlag, setImpersonationFlag] = useState(false);
 
   useEffect(() => {
     let intervalId = null;
@@ -119,6 +120,15 @@ export default function WebcamMonitor({ attemptId, isPaused = false, onSuspicion
       if (res.status === 'success') {
         setTelemetry(res);
 
+        // Update sticky impersonation flag
+        const hasImpersonationEvent = (res.triggered_events || []).includes('IMPERSONATION_DETECTED');
+        if (hasImpersonationEvent) {
+          setImpersonationFlag(true);
+        } else if (res.face_detected && (res.triggered_events || []).length === 0) {
+          // Clear only when face is detected and no events triggered (genuine student confirmed)
+          setImpersonationFlag(false);
+        }
+
         // Smooth 60FPS Tracking Update
         if (trackerRef.current) {
           const vw = video.videoWidth || 640;
@@ -206,6 +216,7 @@ export default function WebcamMonitor({ attemptId, isPaused = false, onSuspicion
   const isPhoneDetected = telemetry.phone_status === 'DETECTED' || telemetry.phone_confirmed;
   const isAbsent = telemetry.presence_status === 'STUDENT_ABSENT' || (!telemetry.face_detected && telemetry.person_count === 0);
   const isMultiPerson = telemetry.person_count > 1 || telemetry.presence_status === 'MULTIPLE_PERSONS_DETECTED';
+  const isImpersonation = impersonationFlag || (telemetry.triggered_events || []).includes('IMPERSONATION_DETECTED');
 
   return (
     <div className="glass-card" style={{ padding: '0.85rem', width: '310px', position: 'relative', overflow: 'hidden' }}>
@@ -234,8 +245,8 @@ export default function WebcamMonitor({ attemptId, isPaused = false, onSuspicion
         overflow: 'hidden',
         backgroundColor: '#020617',
         aspectRatio: '4/3',
-        border: `2px solid ${isPhoneDetected || isAbsent || isMultiPerson ? '#ef4444' : (isHeadSuspicious ? '#f59e0b' : 'var(--border-color)')}`,
-        boxShadow: isPhoneDetected ? '0 0 15px rgba(239, 68, 68, 0.4)' : 'none'
+        border: `2px solid ${isImpersonation || isPhoneDetected || isAbsent || isMultiPerson ? '#ef4444' : (isHeadSuspicious ? '#f59e0b' : 'var(--border-color)')}`,
+        boxShadow: isImpersonation ? '0 0 15px rgba(239, 68, 68, 0.5)' : (isPhoneDetected ? '0 0 15px rgba(239, 68, 68, 0.4)' : 'none')
       }}>
         <video
           ref={videoRef}
@@ -416,6 +427,26 @@ export default function WebcamMonitor({ attemptId, isPaused = false, onSuspicion
             gap: '3px'
           }}>
             {micEnergy > 0.03 ? '⚠ Talking / Noise' : '✓ Normal'}
+          </span>
+        </div>
+
+        {/* 6. Identity / Impersonation Check */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          borderTop: '1px solid var(--border-subtle)',
+          paddingTop: '0.35rem'
+        }}>
+          <span style={{ color: 'var(--text-muted)', fontWeight: 600 }}>Identity Match:</span>
+          <span style={{
+            color: isImpersonation ? '#ef4444' : '#10b981',
+            fontWeight: 700,
+            display: 'flex',
+            alignItems: 'center',
+            gap: '3px'
+          }}>
+            {isImpersonation ? '⚠ IMPERSONATION' : '✓ Verified'}
           </span>
         </div>
       </div>

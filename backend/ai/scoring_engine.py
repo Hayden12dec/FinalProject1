@@ -19,7 +19,14 @@ EVENT_WEIGHTS = {
     EventTypeEnum.AUDIO_ACTIVITY_DETECTED: settings.WEIGHT_AUDIO_ACTIVITY,
     EventTypeEnum.STUDENT_ABSENT: settings.WEIGHT_STUDENT_ABSENT,
     EventTypeEnum.TAB_SWITCH_DETECTED: 15,
-    EventTypeEnum.IMPERSONATION_DETECTED: 40,
+    EventTypeEnum.IMPERSONATION_DETECTED: 50,  # raised: impersonation is critical
+}
+
+# Per-event cooldown overrides (seconds). Events not listed use the global cooldown.
+EVENT_COOLDOWNS = {
+    EventTypeEnum.IMPERSONATION_DETECTED: 15,   # log once every 15 s
+    EventTypeEnum.STUDENT_ABSENT: 10,
+    EventTypeEnum.FACE_NOT_DETECTED: 8,
 }
 
 class SuspicionScoringEngine:
@@ -64,8 +71,11 @@ class SuspicionScoringEngine:
 
         last_time = self._last_event_times[attempt_id].get(event_type, 0.0)
         
+        # Per-event cooldown or global cooldown
+        cooldown = EVENT_COOLDOWNS.get(event_type, self.cooldown_seconds)
+        
         # Check cooldown window
-        if (now - last_time) < self.cooldown_seconds:
+        if (now - last_time) < cooldown:
             # Event occurred too soon after previous same event -> ignore to prevent spam
             return False, 0
 

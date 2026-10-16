@@ -16,8 +16,12 @@ import {
   Download,
   AlertTriangle,
   Image as ImageIcon,
-  Award
+  Award,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
+
+const INITIAL_GALLERY_LIMIT = 12;
 
 export default function AdminReportView({ attemptId, onBack, currentUser }) {
   const user = currentUser || auth.getUser();
@@ -25,6 +29,21 @@ export default function AdminReportView({ attemptId, onBack, currentUser }) {
   const [report, setReport] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedEvidence, setSelectedEvidence] = useState(null);
+  const [galleryLimit, setGalleryLimit] = useState(INITIAL_GALLERY_LIMIT);
+
+  // Normalise UTC ISO strings (with or without trailing Z) → local time
+  const formatTime = (ts) => {
+    if (!ts) return '—';
+    // If no timezone suffix, treat as UTC by appending Z
+    const normalized = /[Zz]$|[+\-]\d{2}:\d{2}$/.test(ts) ? ts : ts + 'Z';
+    return new Date(normalized).toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
+  };
+
 
   useEffect(() => {
     async function fetchReport() {
@@ -68,7 +87,7 @@ export default function AdminReportView({ attemptId, onBack, currentUser }) {
   return (
     <div className="main-content" style={{ maxWidth: '1080px' }}>
       {/* Top Controls */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+      <div className="no-print" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
         <button onClick={onBack} className="btn btn-secondary btn-sm">
           <ArrowLeft size={16} /> Back
         </button>
@@ -249,45 +268,170 @@ export default function AdminReportView({ attemptId, onBack, currentUser }) {
           </div>
         </div>
 
-        {/* 4. Evidence Screenshots Gallery - ADMIN ONLY */}
+
+
+        {/* 4. Incident Evidence Snapshot Gallery - HIDDEN ON PRINT/PDF */}
         {isAdmin && proctoring_summary.evidence_gallery?.length > 0 && (
-          <div style={{ marginBottom: '2rem' }}>
+          <div className="no-print" style={{ marginBottom: '2rem' }}>
             <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-blue)' }}>
-              <ImageIcon size={18} /> 4. Incident Evidence Snapshot Gallery ({proctoring_summary.evidence_gallery.length})
+              <ImageIcon size={18} /> 4. Incident Evidence Snapshot Gallery
+              <span style={{ marginLeft: '0.5rem', fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 400, fontFamily: 'var(--font-mono)' }}>
+                ({proctoring_summary.evidence_gallery.length > galleryLimit
+                  ? `Showing ${Math.min(galleryLimit, proctoring_summary.evidence_gallery.length)} of ${proctoring_summary.evidence_gallery.length}`
+                  : `${proctoring_summary.evidence_gallery.length} captures`})
+              </span>
+              <span style={{
+                marginLeft: 'auto',
+                fontSize: '0.68rem',
+                color: 'var(--text-muted)',
+                background: 'var(--bg-surface)',
+                border: '1px solid var(--border-color)',
+                borderRadius: '4px',
+                padding: '0.2rem 0.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.3rem'
+              }}>
+                <Download size={11} /> Hidden in PDF export
+              </span>
             </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1rem' }}>
-              {proctoring_summary.evidence_gallery.map((ev, idx) => (
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+              gap: '0.85rem'
+            }}>
+              {proctoring_summary.evidence_gallery.slice(0, galleryLimit).map((ev, idx) => (
                 <div
                   key={idx}
-                  onClick={() => setSelectedEvidence(ev)}
+                  onClick={() => setSelectedEvidence({ ...ev })}
                   style={{
                     backgroundColor: 'var(--bg-primary)',
+                    border: '1px solid var(--border-subtle)',
                     borderRadius: '8px',
                     overflow: 'hidden',
-                    border: '1px solid var(--border-color)',
                     cursor: 'pointer',
-                    transition: 'transform 0.15s ease'
+                    transition: 'border-color 0.15s ease, transform 0.15s ease',
+                    position: 'relative'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.borderColor = 'var(--accent-blue)';
+                    e.currentTarget.style.transform = 'scale(1.02)';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                    e.currentTarget.style.transform = 'scale(1)';
                   }}
                 >
-                  <div style={{ height: '140px', backgroundColor: '#000000', overflow: 'hidden' }}>
+                  {/* Thumbnail */}
+                  <div style={{ height: '130px', backgroundColor: '#000', overflow: 'hidden', position: 'relative' }}>
                     <img
                       src={ev.image_url}
-                      alt="Incident Snapshot"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      alt={`Evidence ${idx + 1}`}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }}
+                      onError={e => { e.currentTarget.style.display = 'none'; }}
                     />
-                  </div>
-                  <div style={{ padding: '0.65rem' }}>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#fca5a5' }}>
-                      {ev.event_type.replace(/_/g, ' ')}
+                    {/* Index badge */}
+                    <span style={{
+                      position: 'absolute',
+                      top: '6px',
+                      left: '6px',
+                      backgroundColor: 'rgba(0,0,0,0.7)',
+                      color: '#fff',
+                      fontSize: '0.65rem',
+                      fontFamily: 'var(--font-mono)',
+                      fontWeight: 700,
+                      padding: '0.15rem 0.4rem',
+                      borderRadius: '4px'
+                    }}>#{idx + 1}</span>
+                    {/* Hover overlay */}
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundColor: 'rgba(59,130,246,0.15)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      opacity: 0,
+                      transition: 'opacity 0.15s ease'
+                    }}
+                      onMouseEnter={e => { e.currentTarget.style.opacity = '1'; }}
+                      onMouseLeave={e => { e.currentTarget.style.opacity = '0'; }}
+                    >
+                      <ImageIcon size={22} color="#fff" />
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-                      <span>+{ev.points} pts</span>
-                      <span>{ev.timestamp ? new Date(ev.timestamp).toLocaleTimeString() : ''}</span>
+                  </div>
+                  {/* Caption */}
+                  <div style={{ padding: '0.55rem 0.65rem' }}>
+                    <div style={{ fontSize: '0.72rem', fontWeight: 600, color: '#fca5a5', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      {(ev.event_type || 'INCIDENT').replace(/_/g, ' ')}
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.25rem' }}>
+                      <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
+                        {formatTime(ev.timestamp)}
+                      </span>
+                      <span style={{ fontSize: '0.68rem', color: '#f59e0b', fontWeight: 700 }}>
+                        +{ev.points || ev.suspicion_points || 0} pts
+                      </span>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* View More / Show All / Show Less Controls */}
+            {proctoring_summary.evidence_gallery.length > INITIAL_GALLERY_LIMIT && (
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.75rem', marginTop: '1.25rem' }}>
+                {galleryLimit < proctoring_summary.evidence_gallery.length ? (
+                  <>
+                    <button
+                      onClick={() => setGalleryLimit(prev => Math.min(prev + 12, proctoring_summary.evidence_gallery.length))}
+                      className="btn btn-secondary btn-sm"
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.4rem',
+                        padding: '0.45rem 1.1rem',
+                        fontSize: '0.8rem',
+                        fontWeight: 600,
+                        cursor: 'pointer'
+                      }}
+                    >
+                      <ChevronDown size={15} />
+                      View More ({proctoring_summary.evidence_gallery.length - galleryLimit} remaining)
+                    </button>
+                    <button
+                      onClick={() => setGalleryLimit(proctoring_summary.evidence_gallery.length)}
+                      className="btn btn-secondary btn-sm"
+                      style={{
+                        padding: '0.45rem 0.9rem',
+                        fontSize: '0.8rem',
+                        color: 'var(--accent-blue)',
+                        fontWeight: 600,
+                        cursor: 'pointer'
+                      }}
+                    >
+                      Show All ({proctoring_summary.evidence_gallery.length})
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    onClick={() => setGalleryLimit(INITIAL_GALLERY_LIMIT)}
+                    className="btn btn-secondary btn-sm"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.4rem',
+                      padding: '0.45rem 1.1rem',
+                      fontSize: '0.8rem',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <ChevronUp size={15} />
+                    Show Less (Back to {INITIAL_GALLERY_LIMIT})
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         )}
 
@@ -295,7 +439,7 @@ export default function AdminReportView({ attemptId, onBack, currentUser }) {
         {isAdmin && (
           <div style={{ marginBottom: '2rem' }}>
             <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-blue)' }}>
-              <Clock size={18} /> {proctoring_summary.evidence_gallery?.length > 0 ? '5' : '4'}. Chronological Incident Timeline
+              <Clock size={18} /> <span className="hide-on-print">5</span><span className="show-on-print">4</span>. Chronological Incident Timeline
             </h3>
             <div style={{ backgroundColor: 'var(--bg-primary)', borderRadius: '8px', border: '1px solid var(--border-subtle)', overflow: 'hidden' }}>
               <table className="data-table">
@@ -319,7 +463,7 @@ export default function AdminReportView({ attemptId, onBack, currentUser }) {
                     proctoring_summary.events_timeline?.map((ev, idx) => (
                       <tr key={idx}>
                         <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem' }}>
-                          {new Date(ev.timestamp).toLocaleTimeString()}
+                          {formatTime(ev.timestamp)}
                         </td>
                         <td style={{ fontWeight: 600, color: '#fca5a5' }}>
                           {ev.event_type.replace(/_/g, ' ')}

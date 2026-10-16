@@ -260,3 +260,66 @@ h1, h2, h3, h4, h5, h6 {
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+/* Print & PDF Export Styles */
+.show-on-print {
+  display: none;
+}
+
+@media print {
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  .show-on-print {
+    display: inline !important;
+  }
+
+  .hide-on-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .app-container {
+    min-height: auto !important;
+    display: block !important;
+  }
+
+  .main-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .glass-card {
+    border: 1px solid var(--border-color) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  @page {
+    margin: 12mm;
+    size: auto;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}

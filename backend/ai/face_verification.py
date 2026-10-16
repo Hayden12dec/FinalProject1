@@ -2,9 +2,15 @@ import os
 import cv2
 import numpy as np
 import logging
+from pathlib import Path
 from backend.ai.face_detection import face_detector
 
 logger = logging.getLogger(__name__)
+
+# Resolve model weights directory relative to this file's location (backend/ai/)
+_AI_DIR = Path(__file__).resolve().parent
+_BACKEND_DIR = _AI_DIR.parent
+_WEIGHTS_DIR = _BACKEND_DIR / "models" / "weights"
 
 class FaceVerifier:
     """
@@ -24,7 +30,7 @@ class FaceVerifier:
     - Camera distance, translation, and in-plane head tilt
     - Ambient room lighting, backlight, and webcam sensor variations
     """
-    def __init__(self, similarity_threshold=0.55):
+    def __init__(self, similarity_threshold=0.45):
         self.similarity_threshold = similarity_threshold
         self.sface_recognizer = None
         self.yunet_detector = None
@@ -49,8 +55,10 @@ class FaceVerifier:
 
     def _init_models(self):
         # 1. Initialize SFace Deep Neural Network
-        sface_weights = os.path.join("models", "weights", "face_recognition_sface_2021dec.onnx")
-        yunet_weights = os.path.join("models", "weights", "face_detection_yunet_2023mar.onnx")
+        sface_weights = str(_WEIGHTS_DIR / "face_recognition_sface_2021dec.onnx")
+        yunet_weights = str(_WEIGHTS_DIR / "face_detection_yunet_2023mar.onnx")
+        logger.info(f"Looking for SFace weights at: {sface_weights}")
+        logger.info(f"Looking for YuNet weights at: {yunet_weights}")
         
         if os.path.exists(sface_weights) and hasattr(cv2, "FaceRecognizerSF"):
             try:
@@ -343,12 +351,13 @@ class FaceVerifier:
         # --- Primary Deep Neural Network Biometric Match (SFace 128-D Embedding) ---
         if feat_ref is not None and feat_query is not None and self.sface_recognizer is not None:
             try:
-                # SFace Cosine similarity: range [-1.0, 1.0], official verification threshold = 0.363
+                # SFace Cosine similarity: range [-1.0, 1.0], revised verification threshold = 0.45
                 cos_sim = float(self.sface_recognizer.match(feat_ref, feat_query, cv2.FaceRecognizerSF_FR_COSINE))
                 # SFace L2 distance: range [0.0, 2.0], official verification threshold = 1.128
                 l2_dist = float(self.sface_recognizer.match(feat_ref, feat_query, cv2.FaceRecognizerSF_FR_NORM_L2))
 
-                # Hard decision: Verified ONLY if cosine >= 0.363 and L2 <= 1.128
+                # Hard decision: Use official SFace thresholds (cosine >= 0.363, L2 <= 1.128)
+                # Temporal confirmation in proctoring_service handles noise filtering
                 is_verified = bool(cos_sim >= 0.363 and l2_dist <= 1.128)
 
                 if is_verified:
@@ -391,10 +400,10 @@ class FaceVerifier:
             r_ref = bio_ref["ratios"]
             r_query = bio_query["ratios"]
             ratio_diff = float(np.mean(np.abs(r_ref - r_query) / (np.abs(r_ref) + 1e-5)))
-            s_ratios = max(0.0, min(1.0, 1.0 - ratio_diff * 4.0))
+            s_ratios = max(0.0, min(1.0, 1.0 - ratio_diff * 6.0))  # more sensitive to ratio differences
 
             s_geom = float(0.60 * s_procrustes + 0.40 * s_ratios)
-            is_verified = bool(s_geom >= 0.70)
+            is_verified = bool(s_geom >= 0.78)  # raised from 0.70 — stricter geometry match
             pct = round(s_geom * 100, 1)
 
             return {
@@ -414,7 +423,7 @@ class FaceVerifier:
         d_query = bio_query.get("descriptor")
         if d_ref is not None and d_query is not None:
             cos_desc = float(np.dot(d_ref, d_query))
-            is_verified = bool(cos_desc >= 0.75)
+            is_verified = bool(cos_desc >= 0.85)  # raised fallback threshold for stricter detection
             pct = round(max(0.0, min(100.0, cos_desc * 100)), 1)
             return {
                 "verified": is_verified,

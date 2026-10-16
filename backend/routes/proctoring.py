@@ -172,4 +172,5 @@ def get_attempt_events(attempt_id: str, current_user: Dict[str, Any] = Depends(g
     events = list(events_col.find({"attempt_id": attempt_id}).sort("timestamp", 1))
     for e in events:
         e["id"] = str(e["_id"])
+        e.pop("_id", None)  # Remove raw ObjectId to prevent JSON serialization errors
     return events

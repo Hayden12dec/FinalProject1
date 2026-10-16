@@ -55,9 +55,9 @@ class PhoneDetector:
             self._discover_classes()
 
             # Warm-up inference so first camera frame executes at top speed without JIT lag
-            warmup_img = np.zeros((384, 384, 3), dtype=np.uint8)
+            warmup_img = np.zeros((640, 640, 3), dtype=np.uint8)
             target_classes = list(self.phone_class_ids.union(self.prohibited_class_ids))
-            self.yolo_model(warmup_img, verbose=False, conf=0.20, imgsz=384, classes=target_classes if target_classes else None)
+            self.yolo_model(warmup_img, verbose=False, conf=0.20, imgsz=640, classes=target_classes if target_classes else None)
 
             logger.info(
                 f"YOLO Object Detector loaded & warmed up from {self.model_path}. "
@@ -164,7 +164,7 @@ class PhoneDetector:
                 image,
                 verbose=False,
                 conf=threshold,
-                imgsz=384,
+                imgsz=640,
                 classes=target_classes if target_classes else None
             )
             

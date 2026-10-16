@@ -162,16 +162,12 @@ class AuthService:
         # Apply updates to database if any
         if updates:
             users_col.update_one({"_id": target_id}, {"$set": updates})
-            try:
-                users_col.update_one({"_id": user["_id"]}, {"$set": updates})
-            except Exception:
-                pass
 
-            # Sync student name across exam attempts for data consistency
+            # Sync student name across ALL exam attempts for data consistency
             if "name" in updates:
                 from backend.config.db import get_attempts_col
                 attempts_col = get_attempts_col()
-                attempts_col.update_one(
+                attempts_col.update_many(
                     {"student_id": target_id},
                     {"$set": {"student_name": updates["name"]}}
                 )

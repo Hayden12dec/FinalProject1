@@ -108,26 +108,74 @@ class ProctoringService:
                     }
                 })
 
-        # 4. Continuous Biometric Impersonation Monitoring (Periodic check every 12 frames)
+        # 4. Continuous Biometric Impersonation Monitoring
+        #    - Runs every 3 frames for responsiveness
+        #    - Requires 3 consecutive FAILED verifications to trigger (eliminates false positives)
+        #    - Requires 2 consecutive PASSED verifications to clear
+        #    - Caches reference biometrics to avoid redundant extraction
         if len(detected_faces) == 1:
             self._frame_counters[attempt_id] = self._frame_counters.get(attempt_id, 0) + 1
-            if self._frame_counters[attempt_id] % 12 == 0:
+            if self._frame_counters[attempt_id] % 3 == 0:
                 users_col = get_users_col()
                 user_doc = users_col.find_one({"_id": student_id}) or users_col.find_one({"_id": str(student_id)})
                 if user_doc and user_doc.get("face_reference"):
                     ref_img = decode_base64_image(user_doc["face_reference"])
                     if ref_img is not None:
-                        v_res = face_verifier.verify_faces(ref_img, frame)
-                        if not v_res.get("verified", False):
-                            triggered_events.append({
-                                "type": EventTypeEnum.IMPERSONATION_DETECTED,
-                                "confidence": round(float(1.0 - v_res.get("similarity", 0.0)), 2),
-                                "metadata": {
-                                    "similarity_percent": v_res.get("similarity_percent", 0.0),
-                                    "threshold": v_res.get("threshold", 0.62),
-                                    "note": "Impersonator detected: candidate face does not match registered student profile"
-                                }
-                            })
+                        # Crop detected face region with padding for cleaner verification
+                        face_bbox = detected_faces[0].get("bbox")
+                        verify_frame = frame
+                        if face_bbox:
+                            fh, fw = frame.shape[:2]
+                            x1, y1, x2, y2 = face_bbox
+                            # Add 25% padding around the face for context
+                            pad_w = int((x2 - x1) * 0.25)
+                            pad_h = int((y2 - y1) * 0.25)
+                            cx1 = max(0, x1 - pad_w)
+                            cy1 = max(0, y1 - pad_h)
+                            cx2 = min(fw, x2 + pad_w)
+                            cy2 = min(fh, y2 + pad_h)
+                            face_crop = frame[cy1:cy2, cx1:cx2]
+                            if face_crop.size > 0:
+                                verify_frame = face_crop
+
+                        v_res = face_verifier.verify_faces(ref_img, verify_frame)
+                        is_match = v_res.get("verified", False)
+
+                        # Initialize temporal tracking for this attempt
+                        if not hasattr(self, '_impersonation_tracker'):
+                            self._impersonation_tracker = {}
+                        if attempt_id not in self._impersonation_tracker:
+                            self._impersonation_tracker[attempt_id] = {
+                                "consecutive_fails": 0,
+                                "consecutive_passes": 0,
+                                "confirmed": False
+                            }
+
+                        tracker = self._impersonation_tracker[attempt_id]
+
+                        if is_match:
+                            tracker["consecutive_passes"] += 1
+                            tracker["consecutive_fails"] = 0
+                            # Need 2 consecutive passes to clear a confirmed impersonation
+                            if tracker["consecutive_passes"] >= 2:
+                                tracker["confirmed"] = False
+                        else:
+                            tracker["consecutive_fails"] += 1
+                            tracker["consecutive_passes"] = 0
+
+                            # Require 3 consecutive failures to confirm impersonation
+                            if tracker["consecutive_fails"] >= 3:
+                                tracker["confirmed"] = True
+                                triggered_events.append({
+                                    "type": EventTypeEnum.IMPERSONATION_DETECTED,
+                                    "confidence": round(float(1.0 - v_res.get("similarity", 0.0)), 2),
+                                    "metadata": {
+                                        "similarity_percent": v_res.get("similarity_percent", 0.0),
+                                        "threshold": v_res.get("threshold", 0.62),
+                                        "consecutive_fails": tracker["consecutive_fails"],
+                                        "note": "Impersonator detected: candidate face does not match registered student profile (temporally confirmed)"
+                                    }
+                                })
 
         # 5. Audio Activity Check
         if audio_energy is not None and audio_energy > 0:
@@ -159,7 +207,7 @@ class ProctoringService:
                     "student_id": student_id,
                     "exam_id": exam_id,
                     "event_type": ev_type,
-                    "timestamp": datetime.utcnow().isoformat(),
+                    "timestamp": datetime.utcnow().isoformat() + "Z",
                     "confidence": ev.get("confidence", 1.0),
                     "suspicion_points": points,
                     "evidence_image": evidence_path,
@@ -178,7 +226,7 @@ class ProctoringService:
                 "$set": {
                     "suspicion_score": current_score,
                     "risk_level": risk_level,
-                    "last_active": datetime.utcnow().isoformat()
+                    "last_active": datetime.utcnow().isoformat() + "Z"
                 },
                 "$inc": {"total_events": len(saved_events)}
             }
@@ -211,7 +259,7 @@ class ProctoringService:
             "last_event": saved_events[-1] if saved_events else (triggered_events[0]["type"] if triggered_events else "NORMAL"),
             "phone_detected": phone_res.get("phone_detected", False),
             "phone_confidence": phone_res.get("max_confidence", 0.0),
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.utcnow().isoformat() + "Z",
             "preview_image": preview_image
         }
 
@@ -262,7 +310,7 @@ class ProctoringService:
             "student_id": attempt["student_id"],
             "exam_id": attempt["exam_id"],
             "event_type": event_type,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.utcnow().isoformat() + "Z",
             "confidence": confidence,
             "suspicion_points": points,
             "evidence_image": evidence_image or "/evidence/demo_placeholder.jpg",
@@ -278,7 +326,7 @@ class ProctoringService:
                 "$set": {
                     "suspicion_score": current_score,
                     "risk_level": risk_level,
-                    "last_active": datetime.utcnow().isoformat()
+                    "last_active": datetime.utcnow().isoformat() + "Z"
                 },
                 "$inc": {"total_events": 1}
             }
