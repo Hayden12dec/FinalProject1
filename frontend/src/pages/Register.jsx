@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { auth } from '../services/auth';
 import { api } from '../services/api';
 import { SmoothTracker } from '../utils/faceTrackerRenderer';
+import OtpModal from '../components/OtpModal';
 import {
   Shield,
   Camera,
@@ -24,6 +25,12 @@ export default function Register({ onRegisterSuccess, navigateToLogin }) {
   const [studentId, setStudentId] = useState('');
   const [password, setPassword] = useState('');
   const [faceReference, setFaceReference] = useState(null);
+
+  // OTP Verification state
+  const [showOtpModal, setShowOtpModal] = useState(false);
+  const [demoOtp, setDemoOtp] = useState(null);
+  const [verifyingOtp, setVerifyingOtp] = useState(false);
+  const [otpError, setOtpError] = useState(null);
 
   const [cameraActive, setCameraActive] = useState(false);
   const [validatingFace, setValidatingFace] = useState(false);
@@ -187,26 +194,65 @@ export default function Register({ onRegisterSuccess, navigateToLogin }) {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleInitiateRegistration = async (e) => {
     e.preventDefault();
     setError(null);
-    setLoading(true);
 
+    if (!name.trim()) {
+      setError('Full Name is required.');
+      return;
+    }
+    if (!email.trim() || !email.includes('@')) {
+      setError('A valid email address is required.');
+      return;
+    }
+    if (password.length < 6) {
+      setError('Password must be at least 6 characters.');
+      return;
+    }
+    if (!faceReference) {
+      setError('Please capture and validate your facial profile photo before proceeding.');
+      return;
+    }
+
+    setLoading(true);
     try {
-      const user = await auth.register({
-        name,
-        email,
-        student_id: studentId || `STU${Date.now() % 10000}`,
-        password,
-        role: 'student',
-        face_reference: faceReference
-      });
-      onRegisterSuccess(user);
+      const res = await auth.sendOtp(email.trim(), 'registration');
+      setDemoOtp(res.demo_otp || null);
+      setOtpError(null);
+      setShowOtpModal(true);
     } catch (err) {
-      setError(err.message || 'Registration failed.');
+      setError(err.message || 'Failed to send verification OTP.');
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleVerifyOtpAndRegister = async (otpCode) => {
+    setOtpError(null);
+    setVerifyingOtp(true);
+    try {
+      const user = await auth.register({
+        name: name.trim(),
+        email: email.trim(),
+        student_id: studentId.trim() || `STU${Date.now() % 10000}`,
+        password,
+        role: 'student',
+        face_reference: faceReference,
+        otp: otpCode
+      });
+      setShowOtpModal(false);
+      onRegisterSuccess(user);
+    } catch (err) {
+      setOtpError(err.message || 'OTP verification failed. Please enter the correct code.');
+    } finally {
+      setVerifyingOtp(false);
+    }
+  };
+
+  const handleResendOtp = async () => {
+    const res = await auth.sendOtp(email.trim(), 'registration');
+    setDemoOtp(res.demo_otp || null);
   };
 
   return (
@@ -256,7 +302,7 @@ export default function Register({ onRegisterSuccess, navigateToLogin }) {
           </div>
         )}
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleInitiateRegistration}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
             <div className="form-group">
               <label className="form-label">Full Name</label>
@@ -484,9 +530,22 @@ export default function Register({ onRegisterSuccess, navigateToLogin }) {
             className="btn btn-primary"
             style={{ width: '100%', marginTop: '0.5rem', padding: '0.8rem' }}
           >
-            {loading ? 'Creating Candidate Profile...' : 'Complete Registration'} <ArrowRight size={16} />
+            {loading ? 'Sending Verification OTP...' : 'Verify Email & Complete Registration'} <ArrowRight size={16} />
           </button>
         </form>
+
+        {/* OTP Verification Modal */}
+        <OtpModal
+          isOpen={showOtpModal}
+          email={email}
+          demoOtp={demoOtp}
+          role="student"
+          onVerify={handleVerifyOtpAndRegister}
+          onResend={handleResendOtp}
+          onClose={() => setShowOtpModal(false)}
+          isVerifying={verifyingOtp}
+          error={otpError}
+        />
 
         <div style={{ textAlign: 'center', marginTop: '1.25rem', fontSize: '0.825rem', color: 'var(--text-secondary)' }}>
           Already registered?{' '}

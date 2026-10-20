@@ -2,6 +2,25 @@ from typing import List, Optional, Dict, Any
 from pydantic import BaseModel, Field
 
 # Auth Schemas
+class SendOtpRequest(BaseModel):
+    email: str
+    purpose: Optional[str] = "registration"
+
+class SendOtpResponse(BaseModel):
+    success: bool
+    message: str
+    email: str
+    expires_in: int = 600
+    demo_otp: Optional[str] = None
+
+class VerifyOtpRequest(BaseModel):
+    email: str
+    otp: str
+
+class VerifyOtpResponse(BaseModel):
+    success: bool
+    message: str
+
 class RegisterRequest(BaseModel):
     name: str
     email: str
@@ -10,6 +29,7 @@ class RegisterRequest(BaseModel):
     student_id: Optional[str] = None
     face_reference: Optional[str] = None
     subject: Optional[str] = None
+    otp: Optional[str] = None
 
 class LoginRequest(BaseModel):
     email: str
@@ -21,6 +41,7 @@ class AdminRegisterRequest(BaseModel):
     password: str
     invite_code: str
     subject: Optional[str] = "All Subjects"
+    otp: Optional[str] = None
 
 class TokenResponse(BaseModel):
     access_token: str

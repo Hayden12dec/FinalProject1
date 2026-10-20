@@ -41,6 +41,14 @@ export const auth = {
     return res.user;
   },
 
+  async sendOtp(email, purpose = 'registration') {
+    return await api.post('/auth/send-otp', { email, purpose });
+  },
+
+  async verifyOtp(email, otp) {
+    return await api.post('/auth/verify-otp', { email, otp });
+  },
+
   setSession(res) {
     api.setToken(res.access_token);
     this.setUser(res.user);

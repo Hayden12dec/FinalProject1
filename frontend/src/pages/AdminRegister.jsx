@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { api } from '../services/api';
 import { auth } from '../services/auth';
+import OtpModal from '../components/OtpModal';
 import {
   ShieldCheck, Mail, KeyRound, User, Lock, ArrowRight, AlertCircle, Eye, EyeOff, BookOpen
 } from 'lucide-react';
@@ -17,12 +18,26 @@ export default function AdminRegister({ onRegisterSuccess, navigateToLogin }) {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // OTP Verification state
+  const [showOtpModal, setShowOtpModal] = useState(false);
+  const [demoOtp, setDemoOtp] = useState(null);
+  const [verifyingOtp, setVerifyingOtp] = useState(false);
+  const [otpError, setOtpError] = useState(null);
+
   const popularSubjects = ['DBMS', 'AI & ML', 'Computer Networks', 'Operating Systems', 'Mathematics', 'All Subjects'];
 
-  const handleSubmit = async (e) => {
+  const handleInitiateAdminRegister = async (e) => {
     e.preventDefault();
     setError(null);
 
+    if (!name.trim()) {
+      setError('Administrator name is required.');
+      return;
+    }
+    if (!email.trim() || !email.includes('@')) {
+      setError('A valid institutional email address is required.');
+      return;
+    }
     if (password !== confirmPassword) {
       setError('Passwords do not match.');
       return;
@@ -38,21 +53,43 @@ export default function AdminRegister({ onRegisterSuccess, navigateToLogin }) {
 
     setLoading(true);
     try {
-      const data = await api.post('/auth/register-admin', {
-        name,
-        email,
-        subject: subject.trim() || 'All Subjects',
-        password,
-        invite_code: inviteCode.trim()
-      });
-      // Store token same way as regular login
-      auth.setSession(data);
-      onRegisterSuccess(data.user);
+      const res = await auth.sendOtp(email.trim(), 'admin-registration');
+      setDemoOtp(res.demo_otp || null);
+      setOtpError(null);
+      setShowOtpModal(true);
     } catch (err) {
-      setError(err.message || 'Registration failed. Check your invite code and try again.');
+      setError(err.message || 'Failed to send OTP verification code.');
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleVerifyOtpAndRegister = async (otpCode) => {
+    setOtpError(null);
+    setVerifyingOtp(true);
+    try {
+      const data = await api.post('/auth/register-admin', {
+        name: name.trim(),
+        email: email.trim(),
+        subject: subject.trim() || 'All Subjects',
+        password,
+        invite_code: inviteCode.trim(),
+        otp: otpCode
+      });
+      // Store token same way as regular login
+      auth.setSession(data);
+      setShowOtpModal(false);
+      onRegisterSuccess(data.user);
+    } catch (err) {
+      setOtpError(err.message || 'OTP verification failed. Please enter the correct code.');
+    } finally {
+      setVerifyingOtp(false);
+    }
+  };
+
+  const handleResendOtp = async () => {
+    const res = await auth.sendOtp(email.trim(), 'admin-registration');
+    setDemoOtp(res.demo_otp || null);
   };
 
   return (
@@ -121,7 +158,7 @@ export default function AdminRegister({ onRegisterSuccess, navigateToLogin }) {
           </div>
         )}
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleInitiateAdminRegister}>
           {/* Full Name */}
           <div className="form-group">
             <label className="form-label">Full Name & Title</label>
@@ -288,9 +325,22 @@ export default function AdminRegister({ onRegisterSuccess, navigateToLogin }) {
               background: loading ? undefined : 'linear-gradient(135deg, #d97706, #f59e0b)'
             }}
           >
-            {loading ? 'Creating Admin Account...' : 'Register as Administrator'} <ArrowRight size={16} />
+            {loading ? 'Sending Verification OTP...' : 'Verify Email & Register Admin'} <ArrowRight size={16} />
           </button>
         </form>
+
+        {/* OTP Verification Modal */}
+        <OtpModal
+          isOpen={showOtpModal}
+          email={email}
+          demoOtp={demoOtp}
+          role="admin"
+          onVerify={handleVerifyOtpAndRegister}
+          onResend={handleResendOtp}
+          onClose={() => setShowOtpModal(false)}
+          isVerifying={verifyingOtp}
+          error={otpError}
+        />
 
         <div style={{ textAlign: 'center', marginTop: '1.25rem', fontSize: '0.825rem', color: 'var(--text-secondary)' }}>
           Already have an account?{' '}

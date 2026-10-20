@@ -2,10 +2,13 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from typing import Dict, Any
 from pydantic import BaseModel
 from backend.models.schemas import (
+    SendOtpRequest, SendOtpResponse, VerifyOtpRequest, VerifyOtpResponse,
     RegisterRequest, AdminRegisterRequest, LoginRequest, TokenResponse, 
     UserProfileResponse, UserProfileUpdateRequest, UserProfileUpdateResponse
 )
 from backend.services.auth_service import auth_service
+from backend.services.otp_service import otp_service
+from backend.config.db import get_users_col
 from backend.utils.security import get_current_user
 from backend.config.settings import settings
 
@@ -18,6 +21,87 @@ router = APIRouter(prefix="/auth", tags=["Authentication"])
 
 class ValidateFaceRequest(BaseModel):
     image_base64: str
+
+@router.post("/send-otp", response_model=SendOtpResponse)
+def send_otp(req: SendOtpRequest):
+    """
+    Generates and issues a 6-digit OTP for email verification during Student or Admin registration.
+    """
+    clean_email = req.email.strip().lower()
+    if not clean_email or "@" not in clean_email:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="A valid email address is required to receive an OTP."
+        )
+
+    users_col = get_users_col()
+    existing = users_col.find_one({"email": clean_email})
+    if existing:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="An account with this email address is already registered. Please log in."
+        )
+
+    otp_code = otp_service.generate_otp(clean_email, purpose=req.purpose or "registration")
+
+    return SendOtpResponse(
+        success=True,
+        message=f"Verification OTP has been sent to {clean_email}.",
+        email=clean_email,
+        expires_in=600,
+        demo_otp=otp_code if (settings.DEMO_MODE_ENABLED or not settings.SMTP_USER) else None
+    )
+
+@router.post("/verify-otp", response_model=VerifyOtpResponse)
+def verify_otp(req: VerifyOtpRequest):
+    """
+    Validates a submitted 6-digit OTP code before proceeding.
+    """
+    clean_email = req.email.strip().lower()
+    clean_otp = req.otp.strip()
+
+    if not clean_otp:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Please provide a valid 6-digit OTP."
+        )
+
+    is_valid = otp_service.verify_otp(clean_email, clean_otp, consume=False)
+    if not is_valid:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid or expired OTP. Please check the code or request a new one."
+        )
+
+    return VerifyOtpResponse(
+        success=True,
+        message="Email successfully verified with OTP."
+    )
+
+@router.post("/register", response_model=TokenResponse)
+def register(req: RegisterRequest):
+    return auth_service.register_user(req)
+
+@router.post("/register-admin", response_model=TokenResponse)
+def register_admin(req: AdminRegisterRequest):
+    """Register a new admin account. Requires a valid invite code and OTP."""
+    if req.invite_code != settings.ADMIN_INVITE_CODE:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Invalid invite code. Admin registration is restricted."
+        )
+    # Force role to admin regardless of what was sent
+    student_reg = RegisterRequest(
+        name=req.name,
+        email=req.email,
+        password=req.password,
+        role="admin",
+        subject=req.subject or "All Subjects",
+        student_id=None,
+        face_reference=None,
+        otp=req.otp
+    )
+    return auth_service.register_user(student_reg)
 
 @router.post("/validate-face")
 def validate_registration_face(req: ValidateFaceRequest):
@@ -72,29 +156,6 @@ def validate_registration_face(req: ValidateFaceRequest):
         )
     }
 
-@router.post("/register", response_model=TokenResponse)
-def register(req: RegisterRequest):
-    return auth_service.register_user(req)
-
-@router.post("/register-admin", response_model=TokenResponse)
-def register_admin(req: AdminRegisterRequest):
-    """Register a new admin account. Requires a valid invite code."""
-    if req.invite_code != settings.ADMIN_INVITE_CODE:
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="Invalid invite code. Admin registration is restricted."
-        )
-    # Force role to admin regardless of what was sent
-    student_reg = RegisterRequest(
-        name=req.name,
-        email=req.email,
-        password=req.password,
-        role="admin",
-        subject=req.subject or "All Subjects",
-        student_id=None,
-        face_reference=None
-    )
-    return auth_service.register_user(student_reg)
 
 @router.post("/login", response_model=TokenResponse)
 def login(req: LoginRequest):

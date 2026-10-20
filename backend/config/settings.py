@@ -1,8 +1,14 @@
 import os
 from typing import List
+from pathlib import Path
 from dotenv import load_dotenv
 from pydantic import BaseModel, ConfigDict
 
+# Ensure .env is loaded reliably regardless of current working directory
+_base_dir = Path(__file__).resolve().parent.parent.parent
+_env_file = _base_dir / ".env"
+if _env_file.exists():
+    load_dotenv(dotenv_path=_env_file, override=False)
 load_dotenv()
 
 class Settings(BaseModel):
@@ -63,6 +69,16 @@ class Settings(BaseModel):
 
     # Admin Registration
     ADMIN_INVITE_CODE: str = os.getenv("ADMIN_INVITE_CODE", "PROCTOR-ADMIN-2026")
+
+    # SMTP / Email Configuration for OTP dispatch
+    SMTP_ENABLED: bool = os.getenv("SMTP_ENABLED", "True").lower() in ("true", "1")
+    SMTP_HOST: str = os.getenv("SMTP_HOST", "smtp.gmail.com")
+    SMTP_PORT: int = int(os.getenv("SMTP_PORT", 587))
+    SMTP_USE_TLS: bool = os.getenv("SMTP_USE_TLS", "True").lower() in ("true", "1")
+    SMTP_USER: str = os.getenv("SMTP_USER", "")
+    SMTP_PASSWORD: str = os.getenv("SMTP_PASSWORD", "")
+    SMTP_FROM_EMAIL: str = os.getenv("SMTP_FROM_EMAIL", "")
+    SMTP_FROM_NAME: str = os.getenv("SMTP_FROM_NAME", "Smart Proctoring System")
 
 
 settings = Settings()

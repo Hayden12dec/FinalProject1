@@ -23,8 +23,8 @@ $frontendDir = Join-Path $projectRoot "frontend"
 # 1. Start Backend Server
 Start-Process -FilePath "cmd.exe" -ArgumentList "/k", "`"$venvPython`" -m uvicorn backend.app:app --host 127.0.0.1 --port 8000 --reload" -WorkingDirectory $projectRoot
 
-Write-Host "Waiting for backend services to initialize..." -ForegroundColor Yellow
-Start-Sleep -Seconds 5
+Write-Host "Waiting for backend services and AI models to initialize..." -ForegroundColor Yellow
+Start-Sleep -Seconds 10
 
 # 2. Start Frontend Dev Server
 Start-Process -FilePath "cmd.exe" -ArgumentList "/k", "npm run dev" -WorkingDirectory $frontendDir

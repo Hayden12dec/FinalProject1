@@ -10216,5 +10216,1713 @@
     "status": "REVIEW",
     "_id": "d408c2b4-512c-4ebd-9d01-26251d26a623",
     "created_at": "2026-10-16T12:29:35.211909"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:20.829686Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163420_483918.jpg",
+    "metadata": {
+      "energy_level": 0.1102
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "7926cd5a-2f6b-4a0b-a368-fe9977be6e65",
+    "created_at": "2026-10-19T16:34:20.829686"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:23.857444Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163423_59917a.jpg",
+    "metadata": {
+      "energy_level": 0.162
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "bc32b5b8-6e65-4b3b-a1e3-0724366d2577",
+    "created_at": "2026-10-19T16:34:23.857444"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:34:25.522897Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163425_826977.jpg",
+    "metadata": {
+      "direction": "LOOKING_DOWN",
+      "yaw": -15.8,
+      "pitch": -26.9
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "eed10759-f3a9-427e-8a4e-7f0aaeb15dc3",
+    "created_at": "2026-10-19T16:34:25.522897"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:26.907336Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163426_8754f9.jpg",
+    "metadata": {
+      "energy_level": 0.1963
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "66e1c5c9-887b-4253-bd89-a5f92cd18e7b",
+    "created_at": "2026-10-19T16:34:26.907336"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:30.178345Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163430_723c66.jpg",
+    "metadata": {
+      "energy_level": 0.1615
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "3bcf8ee4-de59-4ec4-badf-3775804d756c",
+    "created_at": "2026-10-19T16:34:30.178345"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:33.407202Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163433_7fd4db.jpg",
+    "metadata": {
+      "energy_level": 0.1627
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "438ed26d-f2e5-4a91-8f07-637b66bf741a",
+    "created_at": "2026-10-19T16:34:33.407202"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "IMPERSONATION_DETECTED",
+    "timestamp": "2026-10-19T16:34:36.251026Z",
+    "confidence": 0.5,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_IMPERSONATION_DETECTED_20261019_163436_2f8804.jpg",
+    "metadata": {
+      "similarity_percent": 49.8,
+      "threshold": 0.45,
+      "consecutive_fails": 3,
+      "note": "Impersonator detected: candidate face does not match registered student profile (temporally confirmed)"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "87d2998d-7ea6-4f65-9dc8-dad3642ad82b",
+    "created_at": "2026-10-19T16:34:36.251026"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:36.605155Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163436_255607.jpg",
+    "metadata": {
+      "energy_level": 0.1578
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "4f334c3a-61f4-4080-9f22-24e93c5ee0e5",
+    "created_at": "2026-10-19T16:34:36.605155"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:39.880430Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163439_a71a7a.jpg",
+    "metadata": {
+      "energy_level": 0.1676
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "2804a53d-1887-4c39-bc8e-0db14023e89a",
+    "created_at": "2026-10-19T16:34:39.880430"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:43.035561Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163443_9710d5.jpg",
+    "metadata": {
+      "energy_level": 0.1602
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "b315a499-cdf3-476c-b6a0-4d3335e4d128",
+    "created_at": "2026-10-19T16:34:43.035561"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:46.372621Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163446_52f511.jpg",
+    "metadata": {
+      "energy_level": 0.1812
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "8c0ba737-02fe-490a-8343-f9c82698c5bb",
+    "created_at": "2026-10-19T16:34:46.374270"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:34:49.277162Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163449_c2d787.jpg",
+    "metadata": {
+      "direction": "LOOKING_DOWN",
+      "yaw": -12.3,
+      "pitch": -18.0
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "d205a79c-7a3d-4c7a-8d72-742b5db957df",
+    "created_at": "2026-10-19T16:34:49.277162"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:49.676494Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163449_0af4e0.jpg",
+    "metadata": {
+      "energy_level": 0.2016
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "5a11c5f3-5ced-4a1b-bbee-479ae58c7b61",
+    "created_at": "2026-10-19T16:34:49.676494"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "FACE_NOT_DETECTED",
+    "timestamp": "2026-10-19T16:34:51.274101Z",
+    "confidence": 0.85,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_FACE_NOT_DETECTED_20261019_163451_5b081e.jpg",
+    "metadata": {},
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "67a112a9-4f26-4b7d-9b36-5ccc35150912",
+    "created_at": "2026-10-19T16:34:51.274101"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:34:52.801569Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163452_cd113f.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": 8.4,
+      "pitch": 24.6
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "6b44e836-345f-4f55-8752-93621f2c68fe",
+    "created_at": "2026-10-19T16:34:52.801569"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "IMPERSONATION_DETECTED",
+    "timestamp": "2026-10-19T16:34:52.836321Z",
+    "confidence": 0.53,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_IMPERSONATION_DETECTED_20261019_163452_7fee6c.jpg",
+    "metadata": {
+      "similarity_percent": 46.9,
+      "threshold": 0.45,
+      "consecutive_fails": 15,
+      "note": "Impersonator detected: candidate face does not match registered student profile (temporally confirmed)"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "4564c617-f99c-46e0-91c0-8612b5f3bb7a",
+    "created_at": "2026-10-19T16:34:52.836321"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:52.860632Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163452_f604b3.jpg",
+    "metadata": {
+      "energy_level": 0.2547
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "32d49b9d-3b13-49a5-9f22-5b137a8c7294",
+    "created_at": "2026-10-19T16:34:52.860632"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:34:56.102770Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163456_49c4a1.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -8.1,
+      "pitch": -6.3
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "ecd6a5fd-63c5-4a6e-9b2c-0bdba1bcc60b",
+    "created_at": "2026-10-19T16:34:56.102770"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:56.125254Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163456_2e5d0d.jpg",
+    "metadata": {
+      "energy_level": 0.1883
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "d8e4140a-2a51-4d6d-89aa-93a76c9bcc2d",
+    "created_at": "2026-10-19T16:34:56.125254"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:34:59.352316Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163459_1eefd9.jpg",
+    "metadata": {
+      "energy_level": 0.1854
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "0bf7d1c7-6aaa-4fb5-bc20-b1ddcca32cf8",
+    "created_at": "2026-10-19T16:34:59.352316"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:01.700605Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163501_3f742a.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 23.6,
+      "pitch": 5.3
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "4201c574-ec41-459d-8304-52c8de0b257d",
+    "created_at": "2026-10-19T16:35:01.700605"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:35:02.372825Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163502_583840.jpg",
+    "metadata": {
+      "energy_level": 0.1991
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "c4034946-3303-4132-b214-833326448dc2",
+    "created_at": "2026-10-19T16:35:02.372825"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:35:05.584125Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163505_9ee713.jpg",
+    "metadata": {
+      "energy_level": 0.1698
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "6a36fbda-d48a-4e03-9954-be2f888b0a68",
+    "created_at": "2026-10-19T16:35:05.584125"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:06.393278Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163506_8e5306.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": 16.6,
+      "pitch": 17.2
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "be0e992a-0fed-4cf7-9f2e-d70d91116781",
+    "created_at": "2026-10-19T16:35:06.393278"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "TAB_SWITCH_DETECTED",
+    "timestamp": "2026-10-19T16:35:06.777242Z",
+    "confidence": 1.0,
+    "suspicion_points": 15,
+    "evidence_image": "/evidence/demo_placeholder.jpg",
+    "metadata": {
+      "note": "Candidate navigated away from examination tab"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "7964ae8d-6ba1-45bc-a7c9-b2ef8eb56227",
+    "created_at": "2026-10-19T16:35:06.777242"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:13.701954Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163513_49f608.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": 4.0,
+      "pitch": 1.0
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "a1ef1b50-a93f-4b8c-bd10-17e6461a9f1c",
+    "created_at": "2026-10-19T16:35:13.701954"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:35:13.726047Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163513_3b116a.jpg",
+    "metadata": {
+      "energy_level": 0.1477
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "d37266c6-9416-4bdc-a445-f94a95c6c666",
+    "created_at": "2026-10-19T16:35:13.726047"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:17.035018Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163517_09c56a.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 21.1,
+      "pitch": 4.3
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "f9691e25-c6c7-437b-a6ee-1911606c51ff",
+    "created_at": "2026-10-19T16:35:17.035018"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:35:17.056412Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163517_e596c6.jpg",
+    "metadata": {
+      "energy_level": 0.1343
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "022d8e0b-bd94-4d7c-b841-5ce9f0751c69",
+    "created_at": "2026-10-19T16:35:17.056412"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:20.285333Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163520_3fe080.jpg",
+    "metadata": {
+      "direction": "LOOKING_RIGHT",
+      "yaw": -32.5,
+      "pitch": 6.6
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "e22faf2f-6736-45da-b994-9da806724886",
+    "created_at": "2026-10-19T16:35:20.285333"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:35:20.314057Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163520_c3095a.jpg",
+    "metadata": {
+      "energy_level": 0.1366
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "690d578a-92f5-41cb-b8f8-ff77a8abead0",
+    "created_at": "2026-10-19T16:35:20.314057"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "MOBILE_PHONE_DETECTED",
+    "timestamp": "2026-10-19T16:35:23.745080Z",
+    "confidence": 0.312,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_MOBILE_PHONE_DETECTED_20261019_163523_119287.jpg",
+    "metadata": {
+      "label": "Mobile Phone",
+      "bbox": [
+        251,
+        127,
+        335,
+        224
+      ],
+      "confidence": 0.312,
+      "temporal_confirmed": true
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "b1796714-8d8a-40c5-809b-ab996f5212af",
+    "created_at": "2026-10-19T16:35:23.745080"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:23.770070Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163523_b06756.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": -7.4,
+      "pitch": 21.8
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "d1f8faf8-4543-4f30-a516-dd9bad06acce",
+    "created_at": "2026-10-19T16:35:23.770070"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:35:23.793060Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163523_b6e68f.jpg",
+    "metadata": {
+      "energy_level": 0.1413
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "8ac3484a-7faa-4ac9-aaf6-7668469e78af",
+    "created_at": "2026-10-19T16:35:23.793060"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:27.026187Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163527_8d26b1.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -3.8,
+      "pitch": -5.4
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "e35d7b2b-70df-4420-aa0f-9ecd6f6b24db",
+    "created_at": "2026-10-19T16:35:27.026187"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "AUDIO_ACTIVITY_DETECTED",
+    "timestamp": "2026-10-19T16:35:27.046731Z",
+    "confidence": 0.8,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_AUDIO_ACTIVITY_DETECTED_20261019_163527_c69305.jpg",
+    "metadata": {
+      "energy_level": 0.1328
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "f6c78d98-3aee-4edd-8d9f-e41c701f0036",
+    "created_at": "2026-10-19T16:35:27.046731"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "MOBILE_PHONE_DETECTED",
+    "timestamp": "2026-10-19T16:35:35.270228Z",
+    "confidence": 0.457,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_MOBILE_PHONE_DETECTED_20261019_163535_3e512a.jpg",
+    "metadata": {
+      "label": "Mobile Phone",
+      "bbox": [
+        216,
+        299,
+        389,
+        359
+      ],
+      "confidence": 0.457,
+      "temporal_confirmed": true
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "b2038e02-c3ec-47f5-8e44-8354790bce94",
+    "created_at": "2026-10-19T16:35:35.270228"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:37.226285Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163537_ffc1e4.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": 20.0,
+      "pitch": 22.1
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "4b645b67-e13c-4e1b-bd34-31c8e4df0b60",
+    "created_at": "2026-10-19T16:35:37.226285"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:40.301013Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163540_f626c8.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -8.3,
+      "pitch": 9.1
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "c4ee6203-a68e-4772-8722-b76b7ea6e873",
+    "created_at": "2026-10-19T16:35:40.301013"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "FACE_NOT_DETECTED",
+    "timestamp": "2026-10-19T16:35:41.356127Z",
+    "confidence": 0.85,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_FACE_NOT_DETECTED_20261019_163541_3e2472.jpg",
+    "metadata": {},
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "c72db674-9597-457e-93d2-ac62cea3b0b2",
+    "created_at": "2026-10-19T16:35:41.356127"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:43.602135Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163543_4c3fdd.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 35.6,
+      "pitch": 28.0
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "6e2867f5-1b27-4865-a435-da23c0a06963",
+    "created_at": "2026-10-19T16:35:43.602135"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "IMPERSONATION_DETECTED",
+    "timestamp": "2026-10-19T16:35:44.159568Z",
+    "confidence": 0.67,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_IMPERSONATION_DETECTED_20261019_163544_d4848a.jpg",
+    "metadata": {
+      "similarity_percent": 33.2,
+      "threshold": 0.45,
+      "consecutive_fails": 3,
+      "note": "Impersonator detected: candidate face does not match registered student profile (temporally confirmed)"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "0e988da2-3786-4dab-bd7b-b40ea5be5f52",
+    "created_at": "2026-10-19T16:35:44.159568"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "MOBILE_PHONE_DETECTED",
+    "timestamp": "2026-10-19T16:35:47.289430Z",
+    "confidence": 0.338,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_MOBILE_PHONE_DETECTED_20261019_163547_d86fbe.jpg",
+    "metadata": {
+      "label": "Mobile Phone",
+      "bbox": [
+        283,
+        172,
+        302,
+        200
+      ],
+      "confidence": 0.338,
+      "temporal_confirmed": true
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "2c8b6f5d-ac00-4162-b84e-02a1db380d4e",
+    "created_at": "2026-10-19T16:35:47.289430"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:35:47.317129Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163547_efc347.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": -0.5,
+      "pitch": 18.8
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "b4d0a859-d0e8-4ead-b500-8e1b46b0fabd",
+    "created_at": "2026-10-19T16:35:47.317129"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:03.062718Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163603_ebcc37.jpg",
+    "metadata": {
+      "direction": "LOOKING_RIGHT",
+      "yaw": -38.7,
+      "pitch": 1.0
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "2eba76ae-10ac-46ae-834a-753760168621",
+    "created_at": "2026-10-19T16:36:03.062718"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:06.173722Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163606_190f05.jpg",
+    "metadata": {
+      "direction": "LOOKING_RIGHT",
+      "yaw": -27.5,
+      "pitch": 12.4
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "591f224f-5f46-428a-a2af-ecc3c65f9a6d",
+    "created_at": "2026-10-19T16:36:06.174027"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:09.362307Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163609_7eba9a.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -2.2,
+      "pitch": 6.0
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "9b3873e0-9fb2-4909-8d90-626e8ae9285f",
+    "created_at": "2026-10-19T16:36:09.362307"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "FACE_NOT_DETECTED",
+    "timestamp": "2026-10-19T16:36:10.727666Z",
+    "confidence": 0.85,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_FACE_NOT_DETECTED_20261019_163610_a91e44.jpg",
+    "metadata": {},
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "5c1ce679-5c6d-4d64-ba75-0a65831fb263",
+    "created_at": "2026-10-19T16:36:10.727666"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:12.591215Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163612_8bd28b.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 21.5,
+      "pitch": 11.0
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "c35deff6-b2cd-487b-a7bc-0dc672fbe077",
+    "created_at": "2026-10-19T16:36:12.591215"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:16.117136Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163616_19899e.jpg",
+    "metadata": {
+      "direction": "LOOKING_RIGHT",
+      "yaw": -28.8,
+      "pitch": -4.8
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "95158159-5a1b-4aaf-bdb0-c80554b564a0",
+    "created_at": "2026-10-19T16:36:16.117136"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "MOBILE_PHONE_DETECTED",
+    "timestamp": "2026-10-19T16:36:16.719909Z",
+    "confidence": 0.229,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_MOBILE_PHONE_DETECTED_20261019_163616_08e0ba.jpg",
+    "metadata": {
+      "label": "Mobile Phone",
+      "bbox": [
+        96,
+        152,
+        150,
+        202
+      ],
+      "confidence": 0.229,
+      "temporal_confirmed": true
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "199cb895-3720-44c2-aa7e-87fc9d4db22e",
+    "created_at": "2026-10-19T16:36:16.719909"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "IMPERSONATION_DETECTED",
+    "timestamp": "2026-10-19T16:36:16.751048Z",
+    "confidence": 0.72,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_IMPERSONATION_DETECTED_20261019_163616_dde846.jpg",
+    "metadata": {
+      "similarity_percent": 28.4,
+      "threshold": 0.45,
+      "consecutive_fails": 3,
+      "note": "Impersonator detected: candidate face does not match registered student profile (temporally confirmed)"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "1891e11d-8136-4345-94df-4bee09238f17",
+    "created_at": "2026-10-19T16:36:16.752065"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:19.344756Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163619_37cb25.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -10.8,
+      "pitch": 4.5
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "cbf507ac-8ea7-438d-a4ba-e52b72065d91",
+    "created_at": "2026-10-19T16:36:19.344756"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:26.180219Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163626_35b483.jpg",
+    "metadata": {
+      "direction": "LOOKING_DOWN",
+      "yaw": -11.1,
+      "pitch": -15.6
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "2ac49863-6916-4d88-8b1d-0539500b2341",
+    "created_at": "2026-10-19T16:36:26.180219"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:32.046324Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163632_530ff8.jpg",
+    "metadata": {
+      "direction": "LOOKING_RIGHT",
+      "yaw": -21.1,
+      "pitch": 1.0
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "2f85041f-00fb-4b89-871c-21a515712748",
+    "created_at": "2026-10-19T16:36:32.046324"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "IMPERSONATION_DETECTED",
+    "timestamp": "2026-10-19T16:36:32.073043Z",
+    "confidence": 0.7,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_IMPERSONATION_DETECTED_20261019_163632_d822f4.jpg",
+    "metadata": {
+      "similarity_percent": 29.7,
+      "threshold": 0.45,
+      "consecutive_fails": 8,
+      "note": "Impersonator detected: candidate face does not match registered student profile (temporally confirmed)"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "0492bd14-faf9-4b43-a6d6-d2b3cbacd612",
+    "created_at": "2026-10-19T16:36:32.074039"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:35.179497Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163635_10597c.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -10.1,
+      "pitch": -10.2
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "a4d30db3-07f4-4845-bc55-731b12577959",
+    "created_at": "2026-10-19T16:36:35.179497"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:38.429496Z",
+    "confidence": 0.96,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163638_6a7c93.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -9.8,
+      "pitch": -4.5
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "cfe27afa-1770-4bde-962b-ac39c54adc4f",
+    "created_at": "2026-10-19T16:36:38.429496"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:41.779363Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163641_2249f8.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -7.1,
+      "pitch": -7.2
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "3e4dc557-8cf9-4952-88e2-ca1728931be8",
+    "created_at": "2026-10-19T16:36:41.779363"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:46.405995Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163646_b7e187.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 20.0,
+      "pitch": 35.3
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "40f08f8d-dfab-4153-b9ab-358ba812abc9",
+    "created_at": "2026-10-19T16:36:46.405995"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "MULTIPLE_PERSONS_DETECTED",
+    "timestamp": "2026-10-19T16:36:47.758039Z",
+    "confidence": 0.9,
+    "suspicion_points": 40,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_MULTIPLE_PERSONS_DETECTED_20261019_163647_41fa3d.jpg",
+    "metadata": {
+      "count": 2
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "5671ecf6-e3d5-4f8c-afdc-95adb264e6f1",
+    "created_at": "2026-10-19T16:36:47.758039"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:49.674348Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163649_7d0c48.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": -7.0,
+      "pitch": 28.6
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "a6831023-d8b8-4ab4-be73-5363556ff6e6",
+    "created_at": "2026-10-19T16:36:49.674348"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:52.726731Z",
+    "confidence": 0.78,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163652_c16322.jpg",
+    "metadata": {
+      "direction": "LOOKING_RIGHT",
+      "yaw": -22.2,
+      "pitch": 10.0
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "83caa36b-1168-483a-b4ec-5d70f0c4a6b2",
+    "created_at": "2026-10-19T16:36:52.726731"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:56.240605Z",
+    "confidence": 0.78,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163656_c14b04.jpg",
+    "metadata": {
+      "direction": "LOOKING_RIGHT",
+      "yaw": -32.9,
+      "pitch": -5.2
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "962f21f1-51d0-420b-8cb4-ca1a202cf248",
+    "created_at": "2026-10-19T16:36:56.240605"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "IMPERSONATION_DETECTED",
+    "timestamp": "2026-10-19T16:36:58.029134Z",
+    "confidence": 1.0,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_IMPERSONATION_DETECTED_20261019_163658_f256d4.jpg",
+    "metadata": {
+      "similarity_percent": 0.0,
+      "threshold": 0.45,
+      "consecutive_fails": 3,
+      "note": "Impersonator detected: candidate face does not match registered student profile (temporally confirmed)"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "edeb3837-e48d-4d70-b63b-c9a914d255f1",
+    "created_at": "2026-10-19T16:36:58.029134"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:36:59.521236Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163659_5f75d6.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -15.3,
+      "pitch": 5.4
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "c4cc8862-9cdd-4b9f-b176-be1bf7b6665c",
+    "created_at": "2026-10-19T16:36:59.521236"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "TAB_SWITCH_DETECTED",
+    "timestamp": "2026-10-19T16:37:02.373960Z",
+    "confidence": 1.0,
+    "suspicion_points": 15,
+    "evidence_image": "/evidence/demo_placeholder.jpg",
+    "metadata": {
+      "note": "Candidate navigated away from examination tab"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "b5306fba-eb12-4f8b-b61c-2d33c5bb25cd",
+    "created_at": "2026-10-19T16:37:02.373960"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:37:32.858390Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163732_ac765b.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 21.9,
+      "pitch": 5.3
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "54f3e783-5136-48d1-ada9-ab12d4454ecb",
+    "created_at": "2026-10-19T16:37:32.858390"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:37:36.046591Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163736_ef9b72.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": 7.5,
+      "pitch": 16.2
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "55436fc6-623a-4f57-aeaf-7b3a44e8ff58",
+    "created_at": "2026-10-19T16:37:36.046591"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:37:39.290801Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163739_fe8dab.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": 3.3,
+      "pitch": 39.2
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "fae51594-6ac5-4c0c-86e0-cc1c47521b77",
+    "created_at": "2026-10-19T16:37:39.290801"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "IMPERSONATION_DETECTED",
+    "timestamp": "2026-10-19T16:37:40.009216Z",
+    "confidence": 0.91,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_IMPERSONATION_DETECTED_20261019_163740_124dec.jpg",
+    "metadata": {
+      "similarity_percent": 9.5,
+      "threshold": 0.45,
+      "consecutive_fails": 3,
+      "note": "Impersonator detected: candidate face does not match registered student profile (temporally confirmed)"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "6216666f-b077-4693-8895-838f077aeee1",
+    "created_at": "2026-10-19T16:37:40.009216"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:37:42.779834Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163742_50f80f.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": -5.3,
+      "pitch": 19.8
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "6519d274-76aa-47d7-a1a0-786883cb26cf",
+    "created_at": "2026-10-19T16:37:42.779834"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:37:46.036295Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163746_202b17.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": 19.1,
+      "pitch": 9.5
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "51cefda9-14a0-4eef-84d5-fe742642c8c9",
+    "created_at": "2026-10-19T16:37:46.036295"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:37:49.522917Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163749_63d963.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 30.0,
+      "pitch": -28.7
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "5d581631-bdc2-40ce-8cfa-65c20a2dbccb",
+    "created_at": "2026-10-19T16:37:49.522917"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:37:52.728906Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163752_9d724a.jpg",
+    "metadata": {
+      "direction": "LOOKING_DOWN",
+      "yaw": 1.3,
+      "pitch": -18.3
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "a3406cf7-9d1c-4998-889b-d2ffabf11791",
+    "created_at": "2026-10-19T16:37:52.728906"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:37:55.940020Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163755_c6604a.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -15.2,
+      "pitch": -2.7
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "a5551e08-c2c6-4843-b145-2a07809d5c3b",
+    "created_at": "2026-10-19T16:37:55.940020"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "IMPERSONATION_DETECTED",
+    "timestamp": "2026-10-19T16:37:58.621981Z",
+    "confidence": 0.9,
+    "suspicion_points": 50,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_IMPERSONATION_DETECTED_20261019_163758_31c116.jpg",
+    "metadata": {
+      "similarity_percent": 10.2,
+      "threshold": 0.45,
+      "consecutive_fails": 3,
+      "note": "Impersonator detected: candidate face does not match registered student profile (temporally confirmed)"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "a0250def-6795-4fc3-a50d-a9d91f2ece76",
+    "created_at": "2026-10-19T16:37:58.621981"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:38:03.779258Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163803_bb4762.jpg",
+    "metadata": {
+      "direction": "LOOKING_RIGHT",
+      "yaw": -21.0,
+      "pitch": 17.8
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "73d8d91f-b6f1-4c31-9849-0ae4a97e4cd9",
+    "created_at": "2026-10-19T16:38:03.779258"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "MULTIPLE_PERSONS_DETECTED",
+    "timestamp": "2026-10-19T16:38:08.030178Z",
+    "confidence": 0.9,
+    "suspicion_points": 40,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_MULTIPLE_PERSONS_DETECTED_20261019_163808_52b40b.jpg",
+    "metadata": {
+      "count": 2
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "c4dc67cf-f125-4d30-b0ed-6de29182e4da",
+    "created_at": "2026-10-19T16:38:08.030178"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:38:11.930222Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163811_6310a2.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 32.5,
+      "pitch": 14.7
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "795dc3e4-233d-48b5-b9e6-97aa82eaf26a",
+    "created_at": "2026-10-19T16:38:11.930222"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:38:15.209530Z",
+    "confidence": 0.96,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163815_5cbd52.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": 10.6,
+      "pitch": 7.5
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "f9980b36-38f4-4cd1-abcd-69559752b4dd",
+    "created_at": "2026-10-19T16:38:15.210539"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:38:18.388886Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163818_c8565e.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 27.5,
+      "pitch": 16.5
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "df2285a1-dd1c-4c4c-931b-344efdf5d40c",
+    "created_at": "2026-10-19T16:38:18.388886"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "TAB_SWITCH_DETECTED",
+    "timestamp": "2026-10-19T16:38:19.070656Z",
+    "confidence": 1.0,
+    "suspicion_points": 15,
+    "evidence_image": "/evidence/demo_placeholder.jpg",
+    "metadata": {
+      "note": "Candidate navigated away from examination tab"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "b6114b85-cb63-4ac4-8119-5f0f0866f5d4",
+    "created_at": "2026-10-19T16:38:19.070656"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "FACE_NOT_DETECTED",
+    "timestamp": "2026-10-19T16:38:22.693674Z",
+    "confidence": 0.85,
+    "suspicion_points": 20,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_FACE_NOT_DETECTED_20261019_163822_fa0db6.jpg",
+    "metadata": {},
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "c620d4b5-7849-453c-a275-1225a1c8660c",
+    "created_at": "2026-10-19T16:38:22.693674"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "STUDENT_ABSENT",
+    "timestamp": "2026-10-19T16:38:26.676165Z",
+    "confidence": 0.95,
+    "suspicion_points": 30,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_STUDENT_ABSENT_20261019_163826_54b069.jpg",
+    "metadata": {
+      "missing_frames": 5
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "3dca2a0f-ed30-4e86-9b16-9c261720c923",
+    "created_at": "2026-10-19T16:38:26.676165"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "STUDENT_ABSENT",
+    "timestamp": "2026-10-19T16:38:36.737671Z",
+    "confidence": 0.95,
+    "suspicion_points": 30,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_STUDENT_ABSENT_20261019_163836_f64889.jpg",
+    "metadata": {
+      "missing_frames": 15
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "765d93c3-8668-4c86-accb-ea66e6e44556",
+    "created_at": "2026-10-19T16:38:36.737671"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:38:40.930520Z",
+    "confidence": 0.78,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163840_2decde.jpg",
+    "metadata": {
+      "direction": "LOOKING_RIGHT",
+      "yaw": -30.7,
+      "pitch": 0.7
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "594b575d-1f96-4173-8263-d11b02dce2a0",
+    "created_at": "2026-10-19T16:38:40.930520"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:38:45.642951Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163845_588da1.jpg",
+    "metadata": {
+      "direction": "LOOKING_LEFT",
+      "yaw": 22.6,
+      "pitch": 17.8
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "0ed20e27-bac4-480f-9b72-a29e00e0f794",
+    "created_at": "2026-10-19T16:38:45.642951"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:39:04.658371Z",
+    "confidence": 0.92,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163904_2cef62.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": -10.1,
+      "pitch": 20.5
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "fd1edd26-9810-4395-8842-e77f175861a1",
+    "created_at": "2026-10-19T16:39:04.658371"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:39:07.693991Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163907_8e3e14.jpg",
+    "metadata": {
+      "direction": "LOOKING_UP",
+      "yaw": 5.1,
+      "pitch": 17.0
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "e45f0fae-53a0-49a0-838a-de66b49d9897",
+    "created_at": "2026-10-19T16:39:07.693991"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "SUSPICIOUS_HEAD_MOVEMENT",
+    "timestamp": "2026-10-19T16:39:10.845487Z",
+    "confidence": 0.99,
+    "suspicion_points": 10,
+    "evidence_image": "/evidence/fb024a2c-e3f6-48a2-8d50-53cd2b90f943_0d242c27-f437-4e34-a0d2-2c0994bd6bbd_SUSPICIOUS_HEAD_MOVEMENT_20261019_163910_a2e39b.jpg",
+    "metadata": {
+      "direction": "FORWARD",
+      "yaw": -0.8,
+      "pitch": 14.6
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "a21aa7f2-e139-43fc-8502-6908c102b6d5",
+    "created_at": "2026-10-19T16:39:10.845487"
+  },
+  {
+    "attempt_id": "0c056583-b7be-4cc7-85ab-55cffa1e8912",
+    "student_id": "fb024a2c-e3f6-48a2-8d50-53cd2b90f943",
+    "exam_id": "0d242c27-f437-4e34-a0d2-2c0994bd6bbd",
+    "event_type": "TAB_SWITCH_DETECTED",
+    "timestamp": "2026-10-19T16:39:13.655868Z",
+    "confidence": 1.0,
+    "suspicion_points": 15,
+    "evidence_image": "/evidence/demo_placeholder.jpg",
+    "metadata": {
+      "note": "Candidate navigated away from examination tab"
+    },
+    "is_demo": false,
+    "status": "REVIEW",
+    "_id": "0b9b93a6-9c2b-42e0-8b10-2bde6c393dc1",
+    "created_at": "2026-10-19T16:39:13.655868"
   }
 ]

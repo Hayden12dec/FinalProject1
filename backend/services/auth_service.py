@@ -5,6 +5,7 @@ from backend.config.db import get_users_col
 from backend.models.entities import UserEntity, RoleEnum
 from backend.models.schemas import RegisterRequest, LoginRequest, UserProfileUpdateRequest
 from backend.utils.security import hash_password, verify_password, create_access_token
+from backend.services.otp_service import otp_service
 import logging
 
 logger = logging.getLogger(__name__)
@@ -17,6 +18,19 @@ class AuthService:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="User with this email already exists"
+            )
+
+        # Enforce OTP verification
+        if not req.otp:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="OTP verification code is required. Please verify your email with an OTP first."
+            )
+
+        if not otp_service.verify_otp(req.email, req.otp, consume=True):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Invalid or expired OTP code. Please enter the correct code or request a new one."
             )
 
         role = req.role.lower() if req.role in [RoleEnum.STUDENT, RoleEnum.ADMIN] else RoleEnum.STUDENT
